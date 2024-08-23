@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/hoffconsulting/static/css/main.b5312633.css",
+    "main.js": "/hoffconsulting/static/js/main.da396e3a.js",
+    "static/js/453.f4ca3750.chunk.js": "/hoffconsulting/static/js/453.f4ca3750.chunk.js",
+    "index.html": "/hoffconsulting/index.html",
+    "main.b5312633.css.map": "/hoffconsulting/static/css/main.b5312633.css.map",
+    "main.da396e3a.js.map": "/hoffconsulting/static/js/main.da396e3a.js.map",
+    "453.f4ca3750.chunk.js.map": "/hoffconsulting/static/js/453.f4ca3750.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5312633.css",
+    "static/js/main.da396e3a.js"
+  ]
+}
