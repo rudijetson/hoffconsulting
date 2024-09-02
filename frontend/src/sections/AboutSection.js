@@ -1,6 +1,9 @@
 import React from 'react';
 import { TrendingUp, Users, Database, Cog, Calendar, Download } from 'lucide-react';
 
+// Add this line near the top of your file, outside of any component
+const profileImage = process.env.PUBLIC_URL + '/images/Linkedin.Profile_edit.jpg';
+
 const HighlightItem = ({ icon, text }) => (
   <div className="flex items-center space-x-2 bg-gray-100 p-3 rounded-lg">
     <div className="text-blue-500">{icon}</div>
@@ -14,7 +17,7 @@ const AboutSection = () => (
       <div className="flex flex-col md:flex-row items-center md:items-start">
         <div className="md:w-1/3 mb-8 md:mb-0">
           <img 
-            src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F45c6553e-7806-4d1e-9602-2242bcc541b2%2F33b0e108-2cb4-4a48-9122-1214fea57393%2FLinkedin.Profile_edit.jpg?table=block&id=618aa802-d934-460c-bba3-e90a37760627&spaceId=45c6553e-7806-4d1e-9602-2242bcc541b2&width=2000&userId=a1acce77-5c8d-4090-9482-c520d26dbbbf&cache=v2" 
+            src={profileImage}
             alt="Brandon Z. Hoff" 
             className="rounded-full w-48 h-48 object-cover mx-auto"
           />
