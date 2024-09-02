@@ -29,6 +29,14 @@ const DemoSection = () => {
     "By 2030, AI is expected to contribute up to $15.7 trillion to the global economy."
   ];
 
+  const cannedResponses = [
+    "Here's a sample product description: Our revolutionary AI-powered software streamlines business operations, boosting productivity by up to 40% while cutting costs. Experience the future of work today!",
+    "Here's a catchy marketing tagline: 'Elevate Your Business with AI: Work Smarter, Not Harder!'",
+    "Process improvement suggestion: Implement AI-driven data analysis to identify bottlenecks in your workflow, potentially reducing operational costs by up to 22%.",
+    "Draft business email: \n\nDear [Client],\n\nI hope this email finds you well. I'm reaching out to discuss how our AI solutions can transform your business operations. Our cutting-edge technology has helped companies like yours increase efficiency by up to 35%.\n\nWould you be available for a brief demo next week?\n\nBest regards,\n[Your Name]",
+    "Market trend analysis: AI adoption in businesses is rapidly increasing, with 81% of IT leaders currently investing or planning to invest in AI technologies. This trend is expected to contribute up to $15.7 trillion to the global economy by 2030."
+  ];
+
   useEffect(() => {
     let timer;
     if (isLoading) {
@@ -66,28 +74,13 @@ const DemoSection = () => {
     setIsOutputVisible(true);
     setCurrentFact(aiFactsAndTips[Math.floor(Math.random() * aiFactsAndTips.length)]);
     
-    try {
-      const response = await fetch('http://localhost:5001/api/generate', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ prompt: input }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const data = await response.json();
-      setOutput(data.result);
-    } catch (error) {
-      console.error('Error:', error);
-      setOutput('An error occurred while processing your request. Please try again.');
-    } finally {
+    // Simulate API call delay
+    setTimeout(() => {
+      const randomResponse = cannedResponses[Math.floor(Math.random() * cannedResponses.length)];
+      setOutput(randomResponse);
       setIsLoading(false);
       setInput('');
-    }
+    }, 2000); // 2 second delay to simulate processing
   };
 
   const handleExampleClick = (example) => {
