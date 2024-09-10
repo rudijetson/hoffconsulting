@@ -1,9 +1,7 @@
-
 {
   "name": "hoff-consulting-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rudijetson.github.io/hoffconsulting",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -19,16 +17,13 @@
     "recharts": "^2.5.0"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^5.5.0",
-    "gh-pages": "^5.0.0"
+    "html-webpack-plugin": "^5.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf ../docs && mv build ../docs",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d ../docs"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -47,6 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:5001"
+  }
 }
